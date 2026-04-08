@@ -10,7 +10,6 @@ const links = [
   { href: "/process", label: "Process" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/about", label: "About" },
-  { href: "/portal", label: "Portal" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -41,10 +40,10 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/portal"
+              href="/contact"
               className="rounded-full bg-cream px-5 py-2 text-sm font-medium text-charcoal transition-all hover:bg-sand"
             >
-              Open portal
+              Get in touch
             </Link>
           </div>
 
@@ -88,11 +87,11 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/portal"
+              href="/contact"
               onClick={() => setMobileOpen(false)}
               className="mt-2 block rounded-full bg-cream px-5 py-2.5 text-center text-sm font-medium text-charcoal"
             >
-              Open portal
+              Get in touch
             </Link>
           </div>
         </div>
