@@ -1,0 +1,115 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  CLIENT
+  INTERNAL
+  ADMIN
+}
+
+enum TicketStatus {
+  TODO
+  IN_PROGRESS
+  DONE
+}
+
+enum TicketPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum TicketType {
+  BUG
+  FEATURE
+  IMPROVEMENT
+  DESIGN
+  SHOPIFY
+}
+
+model User {
+  id              String       @id @default(cuid())
+  name            String
+  email           String       @unique
+  company         String?
+  avatarUrl       String?
+  role            UserRole     @default(CLIENT)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  createdTickets  Ticket[]     @relation("CreatedTickets")
+  assignedTickets Ticket[]     @relation("AssignedTickets")
+  comments        Comment[]
+  attachments     Attachment[] @relation("UploadedAttachments")
+
+  @@index([role, company])
+}
+
+model Ticket {
+  id                 String         @id @default(cuid())
+  shortId            String         @unique
+  title              String
+  description        String
+  cleanedDescription String?
+  additionalContext  String?
+  sourceUrl          String?
+  needsDesign        Boolean        @default(false)
+  status             TicketStatus   @default(TODO)
+  type               TicketType
+  priority           TicketPriority?
+  suggestedPriority  TicketPriority?
+  aiCategory         String?
+  aiSummary          String?
+  aiMetadata         Json?
+  clientLabel        String?
+  requesterId        String
+  assigneeId         String?
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+  requester          User           @relation("CreatedTickets", fields: [requesterId], references: [id], onDelete: Restrict)
+  assignee           User?          @relation("AssignedTickets", fields: [assigneeId], references: [id], onDelete: SetNull)
+  comments           Comment[]
+  attachments        Attachment[]
+
+  @@index([status, type, createdAt])
+  @@index([priority, suggestedPriority])
+  @@index([requesterId, createdAt])
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  body      String
+  isInternal Boolean @default(false)
+  ticketId   String
+  authorId   String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  ticket     Ticket   @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  author     User     @relation(fields: [authorId], references: [id], onDelete: Restrict)
+
+  @@index([ticketId, createdAt])
+}
+
+model Attachment {
+  id           String    @id @default(cuid())
+  ticketId      String?
+  uploadedById  String?
+  fileName      String
+  originalName  String
+  mimeType      String
+  sizeBytes     Int
+  storageKey    String
+  url           String
+  createdAt     DateTime @default(now())
+  ticket        Ticket?  @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  uploadedBy    User?    @relation("UploadedAttachments", fields: [uploadedById], references: [id], onDelete: SetNull)
+
+  @@index([ticketId, createdAt])
+  @@index([uploadedById, createdAt])
+}
