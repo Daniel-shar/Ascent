@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
-import { AbstractBlobs, LaunchIllustration, OperateIllustration, OptimiseIllustration } from "@/components/Illustrations";
+import CaseStudyMetric from "@/components/CaseStudyMetric";
+import { AbstractBlobs } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
   title: "Case Studies — Ascent",
@@ -19,7 +20,6 @@ const caseStudies = [
     outcome: "+35% conversion rate increase",
     metric: "35%",
     metricLabel: "Conversion increase",
-    visual: <OptimiseIllustration />,
   },
   {
     title: "SaaS MVP Launch",
@@ -31,7 +31,6 @@ const caseStudies = [
     outcome: "Launched in 6 weeks with 200+ beta signups",
     metric: "6 weeks",
     metricLabel: "Idea to launch",
-    visual: <LaunchIllustration />,
   },
   {
     title: "Platform Stability Overhaul",
@@ -43,7 +42,6 @@ const caseStudies = [
     outcome: "99.9% uptime, 60% faster load times",
     metric: "99.9%",
     metricLabel: "Uptime achieved",
-    visual: <OperateIllustration />,
   },
 ];
 
@@ -99,19 +97,7 @@ export default function CaseStudiesPage() {
             <ScrollReveal key={study.title}>
               <div className="rounded-3xl border border-tan/60 overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-3">
-                  <div className="relative">
-                    <div className="absolute inset-0 hidden lg:block bg-charcoal">
-                      {study.visual}
-                      <div className="absolute inset-0 bg-sand/40" />
-                    </div>
-                    <div className="relative bg-sand p-8 sm:p-10 flex flex-col justify-center items-center text-center lg:bg-transparent lg:min-h-[280px]">
-                      <span className="inline-block rounded-full bg-cream px-3 py-1 text-xs font-medium tracking-wider uppercase text-bark mb-6">
-                        {study.category}
-                      </span>
-                      <div className="text-5xl sm:text-6xl font-semibold text-charcoal">{study.metric}</div>
-                      <p className="mt-2 text-sm text-stone">{study.metricLabel}</p>
-                    </div>
-                  </div>
+                  <CaseStudyMetric metric={study.metric} label={study.metricLabel} category={study.category} />
 
                   <div className="lg:col-span-2 p-8 sm:p-10 bg-cream">
                     <h2 className="text-xl sm:text-2xl font-semibold text-charcoal">{study.title}</h2>
