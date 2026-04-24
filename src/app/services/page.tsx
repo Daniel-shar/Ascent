@@ -67,7 +67,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <p className="text-sm font-medium tracking-widest uppercase text-bark mb-4">Services</p>
+              <p className="text-sm font-medium tracking-[0.15em] uppercase text-bark mb-4">Services</p>
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-charcoal leading-[1.1]">
                 Everything you need to build, grow, and maintain.
               </h1>
@@ -82,7 +82,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="relative grid gap-4 p-8">
                   <div className="rounded-2xl border border-white/10 bg-charcoal/55 p-5 backdrop-blur-sm">
-                    <p className="text-xs font-medium uppercase tracking-[0.22em] text-cream/60">Service stack</p>
+                    <p className="text-xs font-medium uppercase tracking-[0.15em] text-cream/60">Service stack</p>
                     <div className="mt-4 grid grid-cols-3 gap-3">
                       {["Launch", "Optimise", "Operate"].map((item) => (
                         <div key={item} className="rounded-xl border border-white/10 bg-white/5 p-3 text-center text-sm font-medium text-cream">
@@ -97,7 +97,7 @@ export default function ServicesPage() {
                       <span className="text-emerald-300">End-to-end</span>
                     </div>
                     <div className="mt-4 h-2 rounded-full bg-white/10">
-                      <div className="h-full w-[88%] rounded-full bg-gradient-to-r from-indigo-400 via-violet-400 to-emerald-400" />
+                      <div className="h-full w-[88%] rounded-full bg-indigo-400" />
                     </div>
                     <div className="mt-4 grid grid-cols-2 gap-3 text-xs text-cream/55">
                       <div className="rounded-xl border border-white/10 bg-charcoal/45 p-3">MVP builds</div>
@@ -158,23 +158,26 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="relative bg-charcoal py-14 sm:py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(196,168,130,0.22),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(16,185,129,0.18),_transparent_32%)]" />
-        <div className="absolute left-10 top-10 h-40 w-40 rounded-full bg-warm/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-56 w-56 rounded-full bg-emerald-400/10 blur-3xl" />
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-cream">
+      <section className="bg-charcoal py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cream">
             Not sure what you need?
           </h2>
-          <p className="mt-3 text-base text-cream/60 max-w-lg mx-auto">
+          <p className="mt-4 text-lg text-cream/60 max-w-xl mx-auto">
             Get in touch and we&apos;ll help you choose the right path for your business.
           </p>
-          <div className="mt-8">
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center rounded-full bg-cream px-7 py-3.5 text-sm font-medium text-charcoal transition-all hover:bg-sand"
             >
               Get in touch
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full border border-cream/20 px-7 py-3.5 text-sm font-medium text-cream transition-all hover:border-cream/40"
+            >
+              Book a meeting
             </Link>
           </div>
         </div>

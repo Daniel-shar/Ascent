@@ -20,20 +20,14 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 ## Contact Form Email Setup
 
-The contact form posts to `src/app/api/contact/route.ts` and sends email through SMTP.
+The inquiry form collects **phone**, **email**, and **message**, then posts to `src/app/api/contact/route.ts`, which sends mail over SMTP to `CONTACT_TO_EMAIL` (default `danielshar21@gmail.com`).
 
 1. Copy `.env.example` to `.env.local`.
-2. Set these required variables:
-   - `SMTP_HOST`
-   - `SMTP_PORT`
-   - `SMTP_USER`
-   - `SMTP_PASS`
-3. Optional:
-   - `SMTP_SECURE` (`true` for port 465, usually `false` for 587)
-   - `CONTACT_FROM_EMAIL` (defaults to `SMTP_USER`)
-   - `CONTACT_TO_EMAIL` (defaults to `danielshar21@gmail.com`)
+2. Set `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, and `SMTP_PASS` for your provider (Gmail often uses `smtp.gmail.com`, port `587`, `SMTP_SECURE=false`).
+3. For Gmail with 2FA, use an [App Password](https://support.google.com/accounts/answer/185833) as `SMTP_PASS`, not your normal login password.
+4. Optional: `CONTACT_FROM_EMAIL` (defaults to `SMTP_USER`), `CONTACT_TO_EMAIL` (inbox that receives inquiries).
 
-When deploying on Vercel, add the same variables under Project Settings -> Environment Variables.
+Add the same variables in Vercel under Project Settings → Environment Variables. Never commit real passwords to git.
 
 ## Learn More
 

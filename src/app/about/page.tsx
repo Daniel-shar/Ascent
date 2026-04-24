@@ -57,7 +57,7 @@ const stats = [
 function AgencyVisual() {
   const bars = [95, 78, 62];
   return (
-    <div className="relative h-full w-full bg-gradient-to-br from-stone-700 via-zinc-700 to-neutral-800">
+    <div className="relative h-full w-full bg-stone-700">
       <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px)] [background-size:18px_18px]" />
       <div className="absolute left-6 right-6 top-6 space-y-2.5">
         {bars.map((width, i) => (
@@ -79,8 +79,7 @@ function AgencyVisual() {
 
 function FreelancerVisual() {
   return (
-    <div className="relative h-full w-full bg-gradient-to-br from-slate-800 via-slate-900 to-indigo-950">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_28%,rgba(129,140,248,0.25),transparent_45%)]" />
+    <div className="relative h-full w-full bg-slate-900">
       <div className="absolute left-1/2 top-[44%] flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white/80">
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.7} stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6.75a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -98,14 +97,14 @@ function FreelancerVisual() {
 function AscentVisual() {
   const bars = [88, 93, 91];
   return (
-    <div className="relative h-full w-full bg-gradient-to-br from-[#0f1b2a] via-[#15253a] to-[#1f2d3b]">
+    <div className="relative h-full w-full bg-[#15253a]">
       <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:18px_18px]" />
       <div className="absolute left-5 right-5 top-5 space-y-2">
         {bars.map((width, i) => (
           <div key={width} className="flex items-center gap-2">
             <div className="h-2.5 w-2.5 rounded-full bg-emerald-300/90" />
             <div className="h-1.5 flex-1 rounded-full bg-white/10 overflow-hidden">
-              <div className="h-full rounded-full bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400" style={{ width: `${width - i * 4}%` }} />
+              <div className="h-full rounded-full bg-emerald-400" style={{ width: `${width - i * 4}%` }} />
             </div>
           </div>
         ))}
@@ -122,7 +121,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <p className="text-sm font-medium tracking-widest uppercase text-bark mb-4">About Ascent</p>
+              <p className="text-sm font-medium tracking-[0.15em] uppercase text-bark mb-4">About Ascent</p>
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-charcoal leading-[1.1]">
                 A technical partner for founders.
               </h1>
@@ -140,15 +139,15 @@ export default function AboutPage() {
                 </div>
                 <div className="relative grid gap-4 p-8">
                   <div className="rounded-2xl border border-white/10 bg-charcoal/55 p-5 backdrop-blur-sm">
-                    <p className="text-xs font-medium uppercase tracking-[0.22em] text-cream/60">Partner model</p>
+                    <p className="text-xs font-medium uppercase tracking-[0.15em] text-cream/60">Partner model</p>
                     <div className="mt-4 grid grid-cols-2 gap-3">
                       <div className="rounded-xl border border-white/10 bg-white/5 p-4">
                         <div className="text-2xl font-semibold text-cream">50+</div>
-                        <div className="mt-1 text-xs uppercase tracking-[0.18em] text-cream/45">Projects</div>
+                        <div className="mt-1 text-xs uppercase tracking-[0.15em] text-cream/45">Projects</div>
                       </div>
                       <div className="rounded-xl border border-white/10 bg-white/5 p-4">
                         <div className="text-2xl font-semibold text-cream">6w</div>
-                        <div className="mt-1 text-xs uppercase tracking-[0.18em] text-cream/45">Avg launch</div>
+                        <div className="mt-1 text-xs uppercase tracking-[0.15em] text-cream/45">Avg launch</div>
                       </div>
                     </div>
                   </div>
@@ -192,7 +191,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <ScrollReveal>
-                <p className="text-sm font-medium tracking-widest uppercase text-bark mb-4">Our values</p>
+                <p className="text-sm font-medium tracking-[0.15em] uppercase text-bark mb-4">Our values</p>
                 <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-charcoal">
                   What drives how we work.
                 </h2>
@@ -319,21 +318,24 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative bg-charcoal py-14 sm:py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(196,168,130,0.22),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(99,102,241,0.2),_transparent_34%)]" />
-        <div className="absolute left-10 top-8 h-40 w-40 rounded-full bg-warm/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-56 w-56 rounded-full bg-indigo-400/10 blur-3xl" />
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-cream">
+      <section className="bg-charcoal py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cream">
             Let&apos;s work together.
           </h2>
-          <p className="mt-3 text-base text-cream/60 max-w-lg mx-auto">
+          <p className="mt-4 text-lg text-cream/60 max-w-xl mx-auto">
             Whether you&apos;re just starting out or looking to scale, we&apos;re here to help.
           </p>
-          <div className="mt-8">
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center rounded-full bg-cream px-7 py-3.5 text-sm font-medium text-charcoal transition-all hover:bg-sand"
+            >
+              Get in touch
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full border border-cream/20 px-7 py-3.5 text-sm font-medium text-cream transition-all hover:border-cream/40"
             >
               Book a meeting
             </Link>

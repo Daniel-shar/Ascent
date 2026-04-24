@@ -16,12 +16,12 @@ function TrustBar() {
   ];
 
   return (
-    <section className="border-y border-tan/70 bg-sand">
+    <section className="border-y border-tan/60 bg-sand">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-7">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           {trustItems.map((item, i) => (
             <div key={item} className="flex items-center gap-3">
-              <span className="inline-flex items-center rounded-full border border-tan/70 bg-cream px-4 py-2 text-sm font-medium text-charcoal shadow-sm shadow-tan/20">
+              <span className="inline-flex items-center rounded-full border border-tan/60 bg-cream px-4 py-2 text-sm font-medium text-charcoal shadow-sm shadow-tan/20">
                 {item}
               </span>
               {i < trustItems.length - 1 && (
@@ -37,11 +37,11 @@ function TrustBar() {
 
 function WhatWeDoSection() {
   return (
-    <section className="bg-gradient-to-b from-cream to-sand/40 py-16 sm:py-20 border-b border-tan/70">
+    <section className="bg-cream py-16 sm:py-20 border-b border-tan/60">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <ScrollReveal>
-            <p className="text-sm font-medium tracking-widest uppercase text-bark mb-4">What we do</p>
+            <p className="text-sm font-medium tracking-[0.15em] uppercase text-bark mb-4">What we do</p>
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-charcoal">
               From idea to scale — we handle the entire journey.
             </h2>
@@ -51,8 +51,8 @@ function WhatWeDoSection() {
           </ScrollReveal>
           <ScrollReveal delay={0.15} direction="right">
             <div className="grid gap-4">
-              <div className="rounded-2xl border border-tan/70 bg-cream p-6 sm:p-7 shadow-sm">
-                <p className="text-xs font-medium tracking-[0.18em] uppercase text-bark">How we help</p>
+              <div className="rounded-2xl border border-tan/60 bg-cream p-6 sm:p-7 shadow-sm">
+                <p className="text-xs font-medium tracking-[0.15em] uppercase text-bark">How we help</p>
                 <ul className="mt-4 space-y-3">
                   {[
                     "Strategy and technical planning from day one",
@@ -69,12 +69,12 @@ function WhatWeDoSection() {
                 </ul>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="rounded-2xl border border-tan/70 bg-sand/65 p-5">
-                  <p className="text-xs font-medium tracking-[0.18em] uppercase text-bark">Speed</p>
+                <div className="rounded-2xl border border-tan/60 bg-sand/65 p-5">
+                  <p className="text-xs font-medium tracking-[0.15em] uppercase text-bark">Speed</p>
                   <p className="mt-2 text-lg font-semibold text-charcoal">Move from idea to launch in weeks</p>
                 </div>
-                <div className="rounded-2xl border border-tan/70 bg-sand/65 p-5">
-                  <p className="text-xs font-medium tracking-[0.18em] uppercase text-bark">Support</p>
+                <div className="rounded-2xl border border-tan/60 bg-sand/65 p-5">
+                  <p className="text-xs font-medium tracking-[0.15em] uppercase text-bark">Support</p>
                   <p className="mt-2 text-lg font-semibold text-charcoal">Stay stable, improve, and scale</p>
                 </div>
               </div>
@@ -109,7 +109,7 @@ const services = [
 
 function ServicesOverview() {
   return (
-    <section className="bg-sand-dark py-16 sm:py-20 border-b border-tan/70">
+    <section className="bg-sand-dark py-16 sm:py-20 border-b border-tan/60">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, i) => (
@@ -207,11 +207,11 @@ const steps = [
 
 function ProcessSection() {
   return (
-    <section className="bg-cream py-16 sm:py-20 border-b border-tan/70">
+    <section className="bg-cream py-16 sm:py-20 border-b border-tan/60">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-10">
           <ScrollReveal>
-            <p className="text-sm font-medium tracking-widest uppercase text-bark mb-4">Our process</p>
+            <p className="text-sm font-medium tracking-[0.15em] uppercase text-bark mb-4">Our process</p>
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-charcoal">
               A clear path from idea to scale.
             </h2>
@@ -228,7 +228,7 @@ function ProcessSection() {
                       {step.icon}
                     </div>
                     <div>
-                      <p className="text-[11px] uppercase tracking-[0.2em] text-cream/45">{step.number}</p>
+                      <p className="text-[11px] uppercase tracking-[0.15em] text-cream/45">{step.number}</p>
                       <p className="text-sm font-medium text-cream">{step.title}</p>
                     </div>
                   </div>
@@ -310,15 +310,12 @@ const reasons = [
 
 function WhyAscent() {
   return (
-    <section className="relative overflow-hidden bg-cream py-16 sm:py-20 border-b border-tan/70">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(196,168,130,0.2),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(99,102,241,0.1),_transparent_36%)]" />
-      <div className="absolute left-8 top-10 h-40 w-40 rounded-full bg-warm/12 blur-3xl" />
-      <div className="absolute right-0 bottom-0 h-56 w-56 rounded-full bg-indigo-400/8 blur-3xl" />
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-cream py-16 sm:py-20 border-b border-tan/60">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-14 items-start">
           <ScrollReveal>
             <div className="max-w-xl">
-              <p className="text-sm font-medium tracking-widest uppercase text-bark mb-4">Why Ascent</p>
+              <p className="text-sm font-medium tracking-[0.15em] uppercase text-bark mb-4">Why Ascent</p>
               <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-charcoal leading-[1.15]">
                 A partner built for speed, quality, and outcomes.
               </h2>
@@ -327,7 +324,7 @@ function WhyAscent() {
               </p>
               <div className="mt-8 grid grid-cols-2 gap-3 max-w-md">
                 {["Fast onboarding", "Senior execution", "Growth mindset", "Ongoing support"].map((item) => (
-                  <div key={item} className="rounded-xl border border-tan/70 bg-sand/65 px-3 py-2.5 text-xs text-stone">
+                  <div key={item} className="rounded-xl border border-tan/60 bg-sand/65 px-3 py-2.5 text-xs text-stone">
                     {item}
                   </div>
                 ))}
@@ -368,11 +365,8 @@ function WhyAscent() {
 
 function FinalCTA() {
   return (
-    <section className="relative bg-charcoal py-16 sm:py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(196,168,130,0.22),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(129,140,248,0.2),_transparent_35%)]" />
-      <div className="absolute left-10 top-10 h-40 w-40 rounded-full bg-warm/10 blur-3xl" />
-      <div className="absolute bottom-0 right-0 h-56 w-56 rounded-full bg-indigo-400/10 blur-3xl" />
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
+    <section className="bg-charcoal py-16 sm:py-20">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cream">
           Ready to build something real?
         </h2>

@@ -56,7 +56,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             <div>
-              <p className="text-sm font-medium tracking-widest uppercase text-bark mb-4">Contact</p>
+              <p className="text-sm font-medium tracking-[0.15em] uppercase text-bark mb-4">Contact</p>
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-charcoal leading-[1.1]">
                 Let&apos;s build something.
               </h1>
@@ -71,7 +71,7 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-3 bg-charcoal p-4 text-cream">
                     <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                      <p className="text-xs uppercase tracking-[0.2em] text-cream/50">What happens next</p>
+                      <p className="text-xs uppercase tracking-[0.15em] text-cream/50">What happens next</p>
                       <p className="mt-2 text-sm text-cream/80">We review your goals, identify priorities, and follow up with practical next steps.</p>
                     </div>
                     <div className="rounded-2xl border border-white/10 bg-white/5 p-4">

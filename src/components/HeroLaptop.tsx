@@ -40,7 +40,7 @@ function LaptopScreen() {
           {chartBars.map((h, i) => (
             <motion.div
               key={i}
-              className="flex-1 rounded-t bg-gradient-to-t from-cyan-500 to-emerald-400"
+              className="flex-1 rounded-t bg-emerald-400"
               initial={{ height: 0 }}
               animate={{ height: `${h}%` }}
               transition={{ delay: 1.2 + i * 0.05, duration: 0.5, ease: "easeOut" }}
@@ -87,14 +87,13 @@ function LaptopScreen() {
 
 export default function HeroLaptop() {
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#1a1725_0%,#232036_45%,#2b2736_100%)]">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,168,130,0.22)_0%,transparent_45%),radial-gradient(circle_at_bottom_left,rgba(129,140,248,0.2)_0%,transparent_40%)]" />
+    <section className="relative overflow-hidden bg-charcoal">
       <div className="absolute inset-0 border-b border-cream/10" />
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-12 items-center">
           <div>
             <motion.p
-              className="text-xs font-medium tracking-widest uppercase text-cream/65 mb-4"
+              className="text-xs font-medium tracking-[0.15em] uppercase text-cream/65 mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -127,13 +126,13 @@ export default function HeroLaptop() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-cream px-6 py-3 text-sm font-medium text-charcoal transition-all hover:bg-sand"
+                className="inline-flex items-center justify-center rounded-full bg-cream px-7 py-3.5 text-sm font-medium text-charcoal transition-all hover:bg-sand"
               >
                 Get in touch
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-cream/25 px-6 py-3 text-sm font-medium text-cream transition-all hover:border-cream/45 hover:bg-cream/10"
+                className="inline-flex items-center justify-center rounded-full border border-cream/20 px-7 py-3.5 text-sm font-medium text-cream transition-all hover:border-cream/40"
               >
                 Book a meeting
               </Link>
@@ -164,18 +163,12 @@ export default function HeroLaptop() {
                 </div>
               </div>
 
-              <div className="relative h-3 bg-gradient-to-b from-[#3a3632] to-[#4a4540] rounded-b-xl">
+              <div className="relative h-3 bg-[#3a3632] rounded-b-xl">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 h-1 w-16 rounded-b bg-[#555] " />
               </div>
 
-              <div className="relative h-1.5 bg-gradient-to-b from-[#5a5550] to-[#6a6560] rounded-b-lg mx-4" />
+              <div className="relative h-1.5 bg-[#5a5550] rounded-b-lg mx-4" />
 
-              <motion.div
-                className="absolute -bottom-3 left-1/2 -translate-x-1/2 h-1 w-3/4 rounded-full bg-charcoal/10 blur-xl"
-                initial={{ opacity: 0, scaleX: 0.5 }}
-                animate={{ opacity: 1, scaleX: 1 }}
-                transition={{ duration: 0.8, delay: 1 }}
-              />
             </motion.div>
           </div>
         </div>

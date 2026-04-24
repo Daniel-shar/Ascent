@@ -108,7 +108,7 @@ export default function ProcessPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <p className="text-sm font-medium tracking-widest uppercase text-bark mb-4">Our process</p>
+              <p className="text-sm font-medium tracking-[0.15em] uppercase text-bark mb-4">Our process</p>
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-charcoal leading-[1.1]">
                 A proven path from idea to scale.
               </h1>
@@ -128,7 +128,7 @@ export default function ProcessPage() {
                         {step.icon}
                       </div>
                       <div>
-                        <div className="text-xs font-semibold uppercase tracking-[0.2em] text-cream/55">{step.number}</div>
+                        <div className="text-xs font-semibold uppercase tracking-[0.15em] text-cream/55">{step.number}</div>
                         <div className="text-sm font-medium text-cream">{step.title}</div>
                       </div>
                     </div>
@@ -183,21 +183,24 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      <section className="relative bg-charcoal py-14 sm:py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(196,168,130,0.22),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.18),_transparent_34%)]" />
-        <div className="absolute left-6 top-8 h-36 w-36 rounded-full bg-warm/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-56 w-56 rounded-full bg-amber-400/10 blur-3xl" />
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-cream">
+      <section className="bg-charcoal py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cream">
             Ready to start your journey?
           </h2>
-          <p className="mt-3 text-base text-cream/60 max-w-lg mx-auto">
+          <p className="mt-4 text-lg text-cream/60 max-w-xl mx-auto">
             Let&apos;s talk about where you are and map out the next steps together.
           </p>
-          <div className="mt-8">
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center rounded-full bg-cream px-7 py-3.5 text-sm font-medium text-charcoal transition-all hover:bg-sand"
+            >
+              Get in touch
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full border border-cream/20 px-7 py-3.5 text-sm font-medium text-cream transition-all hover:border-cream/40"
             >
               Book a meeting
             </Link>

@@ -54,7 +54,7 @@ export default function CaseStudiesPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <p className="text-sm font-medium tracking-widest uppercase text-bark mb-4">Case Studies</p>
+              <p className="text-sm font-medium tracking-[0.15em] uppercase text-bark mb-4">Case Studies</p>
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-charcoal leading-[1.1]">
                 Real results for real businesses.
               </h1>
@@ -69,7 +69,7 @@ export default function CaseStudiesPage() {
                 </div>
                 <div className="relative grid gap-4 p-8">
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
-                    <p className="text-xs font-medium uppercase tracking-[0.22em] text-cream/60">Recent wins</p>
+                    <p className="text-xs font-medium uppercase tracking-[0.15em] text-cream/60">Recent wins</p>
                     <div className="mt-4 grid grid-cols-3 gap-3">
                       {[
                         { value: "35%", label: "CRO" },
@@ -78,7 +78,7 @@ export default function CaseStudiesPage() {
                       ].map((item) => (
                         <div key={item.label} className="rounded-xl border border-white/10 bg-charcoal/45 p-3 text-center">
                           <div className="text-lg font-semibold text-cream">{item.value}</div>
-                          <div className="mt-1 text-[11px] uppercase tracking-[0.18em] text-cream/45">{item.label}</div>
+                          <div className="mt-1 text-[11px] uppercase tracking-[0.15em] text-cream/45">{item.label}</div>
                         </div>
                       ))}
                     </div>
@@ -102,7 +102,7 @@ export default function CaseStudiesPage() {
                   <div className="relative">
                     <div className="absolute inset-0 hidden lg:block bg-charcoal">
                       {study.visual}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-sand/60" />
+                      <div className="absolute inset-0 bg-sand/40" />
                     </div>
                     <div className="relative bg-sand p-8 sm:p-10 flex flex-col justify-center items-center text-center lg:bg-transparent lg:min-h-[280px]">
                       <span className="inline-block rounded-full bg-cream px-3 py-1 text-xs font-medium tracking-wider uppercase text-bark mb-6">
@@ -138,23 +138,26 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      <section className="relative bg-charcoal py-14 sm:py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(196,168,130,0.22),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(16,185,129,0.2),_transparent_34%)]" />
-        <div className="absolute left-10 top-8 h-40 w-40 rounded-full bg-warm/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-56 w-56 rounded-full bg-emerald-400/10 blur-3xl" />
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-cream">
+      <section className="bg-charcoal py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-cream">
             Want results like these?
           </h2>
-          <p className="mt-3 text-base text-cream/60 max-w-lg mx-auto">
+          <p className="mt-4 text-lg text-cream/60 max-w-xl mx-auto">
             Let&apos;s discuss how we can help you achieve your goals.
           </p>
-          <div className="mt-8">
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center rounded-full bg-cream px-7 py-3.5 text-sm font-medium text-charcoal transition-all hover:bg-sand"
             >
               Get in touch
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full border border-cream/20 px-7 py-3.5 text-sm font-medium text-cream transition-all hover:border-cream/40"
+            >
+              Book a meeting
             </Link>
           </div>
         </div>
