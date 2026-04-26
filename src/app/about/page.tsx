@@ -186,6 +186,35 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="bg-cream py-16 sm:py-20 border-b border-tan/60">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            <ScrollReveal>
+              <div>
+                <p className="text-sm font-medium tracking-[0.15em] uppercase text-bark mb-4">Our mission</p>
+                <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-charcoal">
+                  Technology shouldn&apos;t be the bottleneck.
+                </h2>
+                <p className="mt-6 text-base text-stone leading-relaxed">
+                  Ascent exists to give founders and growing businesses access to the same calibre of technical execution that well-funded startups take for granted. Too many good ideas stall because the person behind them has to choose between an agency that moves slowly, a freelancer who can&apos;t scale, or trying to learn it all themselves. We remove that friction. From the first line of code to long-term optimisation, we act as your embedded technical team — building, launching, and improving your product so you can focus on the business around it.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <div>
+                <p className="text-sm font-medium tracking-[0.15em] uppercase text-bark mb-4">Who we work with</p>
+                <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-charcoal">
+                  Built for builders.
+                </h2>
+                <p className="mt-6 text-base text-stone leading-relaxed">
+                  Our clients are non-technical founders turning a validated idea into their first product, e-commerce brands on Shopify that need better conversion and faster iteration, and established businesses with a live product that needs ongoing development, performance work, or a team to take ownership of the technical side. Whether you&apos;re pre-launch or post-revenue, if you need a technical partner who ships fast and thinks long-term, that&apos;s exactly what we do.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-cream py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
