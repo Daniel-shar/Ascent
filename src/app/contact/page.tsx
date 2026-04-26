@@ -52,19 +52,21 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="bg-cream pt-20 pb-16 sm:pt-24 sm:pb-20">
+      <section className="bg-cream pt-20 pb-14 sm:pt-24 sm:pb-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-            <div>
-              <p className="text-sm font-medium tracking-[0.15em] uppercase text-bark mb-4">Contact</p>
-              <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-charcoal leading-[1.1]">
-                Let&apos;s build something.
-              </h1>
-              <p className="mt-6 text-lg text-stone leading-relaxed">
-                Tell us about your project and we&apos;ll get back to you within 24 hours to discuss next steps.
-              </p>
+          <div className="max-w-3xl">
+            <p className="mb-4 text-sm font-medium tracking-[0.15em] uppercase text-bark">Contact</p>
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-charcoal leading-[1.1]">
+              Let&apos;s build something.
+            </h1>
+            <p className="mt-6 text-lg text-stone leading-relaxed">
+              Tell us about your project and we&apos;ll get back to you within 24 hours to discuss next steps.
+            </p>
+          </div>
 
-              <div className="mt-8 max-w-[520px] rounded-2xl overflow-hidden border border-tan/60 bg-charcoal shadow-lg shadow-tan/20">
+          <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:items-start lg:gap-16">
+            <div className="order-2 lg:order-1">
+              <div className="w-full rounded-2xl overflow-hidden border border-tan/60 bg-charcoal shadow-lg shadow-tan/20">
                 <div className="grid sm:grid-cols-[1fr_0.9fr]">
                   <div className="relative min-h-[180px]">
                     <OptimiseIllustration />
@@ -86,11 +88,64 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="mt-8 space-y-8">
-                <div>
-                  <h3 className="text-sm font-medium text-charcoal mb-2">Email us</h3>
-                  <p className="text-sm text-stone">hello@ascent.dev</p>
-                </div>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <a
+                  href="mailto:ascentinquiryform@gmail.com"
+                  className="rounded-2xl border border-tan/60 bg-sand/55 p-4 transition-colors hover:border-bark/30 hover:bg-sand"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-tan/60 bg-cream text-bark">
+                      <svg
+                        aria-hidden="true"
+                        className="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.8}
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M21.75 7.5v9A2.25 2.25 0 0 1 19.5 18.75h-15A2.25 2.25 0 0 1 2.25 16.5v-9m19.5 0A2.25 2.25 0 0 0 19.5 5.25h-15A2.25 2.25 0 0 0 2.25 7.5m19.5 0v.243a2.25 2.25 0 0 1-.832 1.755l-7.5 6.136a2.25 2.25 0 0 1-2.836 0l-7.5-6.136A2.25 2.25 0 0 1 2.25 7.743V7.5"
+                        />
+                      </svg>
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="text-sm font-medium text-charcoal">Email us</h3>
+                      <p className="mt-1 break-all text-sm text-stone">ascentinquiryform@gmail.com</p>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="tel:+61435174559"
+                  className="rounded-2xl border border-tan/60 bg-sand/55 p-4 transition-colors hover:border-bark/30 hover:bg-sand"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-tan/60 bg-cream text-bark">
+                      <svg
+                        aria-hidden="true"
+                        className="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.8}
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M2.25 4.5A2.25 2.25 0 0 1 4.5 2.25h2.176c.966 0 1.792.694 1.987 1.64l.876 4.204a2.25 2.25 0 0 1-.97 2.31l-1.51 1.007a12.042 12.042 0 0 0 5.53 5.53l1.007-1.51a2.25 2.25 0 0 1 2.31-.97l4.204.876a2.25 2.25 0 0 1 1.64 1.987V19.5a2.25 2.25 0 0 1-2.25 2.25h-.75C9.447 21.75 2.25 14.553 2.25 5.25V4.5Z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-medium text-charcoal">Call us</h3>
+                      <p className="mt-1 text-sm text-stone">0435 174 559</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div className="mt-6 space-y-6">
                 <div>
                   <h3 className="text-sm font-medium text-charcoal mb-2">What to expect</h3>
                   <ul className="space-y-2.5 text-sm text-stone">
@@ -123,7 +178,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div>
+            <div className="order-1 lg:order-2">
               {submitted ? (
                 <div className="rounded-2xl border border-tan/60 bg-sand p-10 text-center">
                   <div className="flex h-14 w-14 mx-auto items-center justify-center rounded-full bg-cream text-warm border border-tan/60">

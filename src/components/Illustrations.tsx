@@ -73,24 +73,6 @@ export function OptimiseIllustration() {
           />
         ))}
       </div>
-      <motion.div
-        className="absolute top-1/3 left-1/4 right-1/4"
-        initial={{ opacity: 0, pathLength: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-      >
-        <svg viewBox="0 0 200 60" fill="none" className="w-full">
-          <motion.path
-            d="M0 50 Q30 45 50 35 T100 20 T150 10 T200 5"
-            stroke="rgba(52,211,153,0.5)"
-            strokeWidth="2"
-            fill="none"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
-          />
-        </svg>
-      </motion.div>
     </div>
   );
 }

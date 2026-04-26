@@ -25,6 +25,7 @@
   --color-stone: var(--stone);
   --color-sand-dark: var(--sand-dark);
   --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 body {
