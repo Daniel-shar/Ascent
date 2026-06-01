@@ -73,7 +73,7 @@ function OperatingModel() {
             One team for the parts founders normally have to stitch together.
           </h2>
           <p className="mt-5 max-w-xl text-base leading-8 text-stone">
-            The redesign is built around a more direct promise: Ascent is not a
+            The redesign is built around a more direct promise: Ascends is not a
             loose collection of services. It is an operating partner for getting
             from idea, to launch, to measurable growth.
           </p>
@@ -155,7 +155,7 @@ function Outcomes() {
         <div className="overflow-hidden rounded-lg border border-charcoal/10 bg-charcoal text-cream">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr]">
             <div className="p-8 sm:p-10">
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.15em] text-emerald-200">Why Ascent</p>
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.15em] text-emerald-200">Why Ascends</p>
               <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
                 Built for founders who need traction, not theatre.
               </h2>

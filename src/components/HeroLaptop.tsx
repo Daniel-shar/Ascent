@@ -134,7 +134,7 @@ export default function HeroLaptop() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.35 }}
             >
-              Ascent is your technical partner from idea to growth. We build
+              Ascends is your technical partner from idea to growth. We build
               products, optimise performance, and manage everything long-term.
             </motion.p>
             <motion.div

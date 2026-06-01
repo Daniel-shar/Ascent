@@ -227,7 +227,7 @@ export function CinematicHero({
   cardHeading = "Technical partnership, sharpened.",
   cardDescription = (
     <>
-      <span className="font-semibold text-white">Ascent</span> helps founders
+      <span className="font-semibold text-white">Ascends</span> helps founders
       launch polished products, improve conversion, and keep the technical side
       moving after release.
     </>
@@ -305,7 +305,7 @@ export function CinematicHero({
           <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col items-center justify-between px-4 pb-5 pt-2 md:pb-7 md:pt-4 lg:grid lg:grid-cols-[1.2fr_1fr_1.2fr] lg:gap-12 lg:px-8 lg:py-0 xl:gap-16 xl:px-4">
             <div className="card-right-text gsap-reveal order-1 z-20 flex w-full flex-col items-center justify-center lg:order-1 lg:items-start">
               <AscentInline className="hero-ascent-logo" />
-              <a href="/contact" aria-label="Get in touch with Ascent" className="card-contact-cta btn-contact-clean group mt-5 hidden min-h-14 items-center justify-center gap-2 rounded-2xl px-8 text-base font-bold tracking-normal focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-blue-700 lg:inline-flex">
+              <a href="/contact" aria-label="Get in touch with Ascends" className="card-contact-cta btn-contact-clean group mt-5 hidden min-h-14 items-center justify-center gap-2 rounded-2xl px-8 text-base font-bold tracking-normal focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-blue-700 lg:inline-flex">
                 Get in touch
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </a>
@@ -404,7 +404,7 @@ export function CinematicHero({
               <p className="mx-auto hidden max-w-sm text-sm font-normal leading-relaxed text-blue-100/70 lg:ml-auto lg:mr-0 lg:block lg:max-w-md lg:text-lg">
                 {cardDescription}
               </p>
-              <a href="/contact" aria-label="Get in touch with Ascent" className="card-contact-cta btn-contact-clean group mt-4 inline-flex min-h-14 items-center justify-center gap-2 self-center rounded-2xl px-8 text-base font-bold tracking-normal focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-blue-700 lg:hidden">
+              <a href="/contact" aria-label="Get in touch with Ascends" className="card-contact-cta btn-contact-clean group mt-4 inline-flex min-h-14 items-center justify-center gap-2 self-center rounded-2xl px-8 text-base font-bold tracking-normal focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-blue-700 lg:hidden">
                 Get in touch
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </a>

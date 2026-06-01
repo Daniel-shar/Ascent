@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SectionLabel from "@/components/SectionLabel";
 
 export const metadata: Metadata = {
-  title: "Process — Ascent",
+  title: "Process — Ascends",
   description: "Our proven 5-step process takes you from idea to scalable product.",
 };
 

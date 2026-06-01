@@ -6,7 +6,7 @@ import CaseStudyMetric from "@/components/CaseStudyMetric";
 import { AbstractBlobs } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Ascent",
+  title: "Case Studies — Ascends",
   description: "See how we've helped founders and brands build, optimise, and scale.",
 };
 
@@ -83,7 +83,7 @@ export default function CaseStudiesPage() {
                     </div>
                   </div>
                   <div className="rounded-lg border border-white/10 bg-charcoal/55 p-5 text-sm text-cream/75 backdrop-blur-sm">
-                    Practical examples of how Ascent moves products from bottlenecks to measurable outcomes.
+                    Practical examples of how Ascends moves products from bottlenecks to measurable outcomes.
                   </div>
                 </div>
               </div>

@@ -16,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ascent — Build. Launch. Grow.",
+  title: "Ascends — Build. Launch. Grow.",
   description:
-    "Ascent is your end-to-end technical partner that helps founders turn ideas into real, scalable businesses.",
+    "Ascends is your end-to-end technical partner that helps founders turn ideas into real, scalable businesses.",
 };
 
 export const viewport: Viewport = {

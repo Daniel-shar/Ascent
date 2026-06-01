@@ -86,7 +86,7 @@ export async function POST(request: Request) {
   });
 
   const emailText = [
-    "New contact message from Ascent website",
+    "New contact message from Ascends website",
     "",
     `Name: ${payload.name}`,
     `Email: ${payload.email}`,
@@ -98,7 +98,7 @@ export async function POST(request: Request) {
 
   try {
     await transporter.sendMail({
-      from: `Ascent Website <${fromEmail}>`,
+      from: `Ascends Website <${fromEmail}>`,
       to: toEmail,
       replyTo: payload.email,
       subject: `New inquiry from ${payload.name}`,

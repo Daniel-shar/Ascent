@@ -7,8 +7,8 @@ import StarRating from "@/components/StarRating";
 import { AbstractBlobs, LaunchIllustration } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
-  title: "About — Ascent",
-  description: "Ascent was built to help founders and businesses move faster with end-to-end technical execution.",
+  title: "About — Ascends",
+  description: "Ascends was built to help founders and businesses move faster with end-to-end technical execution.",
 };
 
 const values = [
@@ -97,7 +97,7 @@ function FreelancerVisual() {
   );
 }
 
-function AscentVisual() {
+function AscendsVisual() {
   const bars = [88, 93, 91];
   return (
     <div className="relative h-full w-full bg-[#15253a]">
@@ -124,12 +124,12 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <SectionLabel>About Ascent</SectionLabel>
+              <SectionLabel>About Ascends</SectionLabel>
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-charcoal leading-[1.1]">
                 A technical partner for founders.
               </h1>
               <p className="mt-6 text-lg text-stone leading-relaxed">
-                Ascent was built to help founders and businesses move faster. Instead of juggling developers, designers, and growth teams, we provide everything in one place.
+                Ascends was built to help founders and businesses move faster. Instead of juggling developers, designers, and growth teams, we provide everything in one place.
               </p>
               <p className="mt-4 text-lg text-stone leading-relaxed">
                 We focus on execution, speed, and real outcomes. No fluff, no endless meetings — just shipping great products that grow your business.
@@ -147,7 +147,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-charcoal">Daniel Shar</p>
-                  <p className="text-xs text-stone">Founder, Ascent</p>
+                  <p className="text-xs text-stone">Founder, Ascends</p>
                   <p className="mt-1 text-xs text-stone leading-relaxed">Building products that grow businesses.</p>
                 </div>
               </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
                     <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full border border-white/20 bg-white/10">
                       <Image
                         src="/founder.jpg"
-                        alt="Daniel Shar, Founder of Ascent"
+                        alt="Daniel Shar, Founder of Ascends"
                         fill
                         sizes="56px"
                         className="object-cover"
@@ -188,7 +188,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-cream">Daniel Shar</p>
-                      <p className="text-xs text-cream/50">Founder, Ascent</p>
+                      <p className="text-xs text-cream/50">Founder, Ascends</p>
                     </div>
                   </div>
                   <div className="rounded-lg border border-white/10 bg-charcoal/55 p-5 backdrop-blur-sm">
@@ -249,7 +249,7 @@ export default function AboutPage() {
                   Technology shouldn&apos;t be the bottleneck.
                 </h2>
                 <p className="mt-5 text-base text-stone leading-relaxed">
-                  Ascent exists to give founders and growing businesses access to the same calibre of technical execution that well-funded startups take for granted. Too many good ideas stall because the person behind them has to choose between an agency that moves slowly, a freelancer who can&apos;t scale, or trying to learn it all themselves. We remove that friction. From the first line of code to long-term optimisation, we act as your embedded technical team — building, launching, and improving your product so you can focus on the business around it.
+                  Ascends exists to give founders and growing businesses access to the same calibre of technical execution that well-funded startups take for granted. Too many good ideas stall because the person behind them has to choose between an agency that moves slowly, a freelancer who can&apos;t scale, or trying to learn it all themselves. We remove that friction. From the first line of code to long-term optimisation, we act as your embedded technical team — building, launching, and improving your product so you can focus on the business around it.
                 </p>
               </div>
             </ScrollReveal>
@@ -369,10 +369,10 @@ export default function AboutPage() {
             <ScrollReveal delay={0.2}>
               <div className="rounded-lg bg-cream border border-tan/60 overflow-hidden">
                 <div className="relative h-36 overflow-hidden bg-charcoal">
-                  <AscentVisual />
+                  <AscendsVisual />
                 </div>
                 <div className="p-6 relative">
-                  <h3 className="text-sm font-semibold text-charcoal">Ascent</h3>
+                  <h3 className="text-sm font-semibold text-charcoal">Ascends</h3>
                   <ul className="mt-4 space-y-2.5 text-sm text-stone">
                     <li className="flex items-start gap-2">
                       <svg className="h-4 w-4 mt-0.5 text-warm flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
