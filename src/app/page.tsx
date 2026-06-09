@@ -9,30 +9,48 @@ import {
 } from "@/components/Illustrations";
 
 const proof = [
-  "Next.js product builds",
-  "Shopify growth systems",
-  "CRO and analytics",
-  "Ongoing technical ownership",
+  "Custom web apps",
+  "Shopify stores",
+  "Conversion optimisation",
+  "Monthly tech support",
 ];
 
 const services = [
   {
-    title: "Launch",
-    description: "Plan, build, and ship the first serious version.",
-    items: ["MVP development", "Shopify builds", "Landing pages"],
+    title: "Build",
+    description: "Turn a business idea into a working website, app, store, or internal tool.",
+    items: ["SaaS MVPs", "Shopify stores", "Landing pages"],
     visual: <LaunchIllustration />,
   },
   {
-    title: "Optimise",
-    description: "Improve funnels, speed, UX, and conversion.",
-    items: ["Conversion audits", "UX improvements", "Analytics setup"],
+    title: "Grow",
+    description: "Improve the experience after launch so more visitors become customers.",
+    items: ["CRO audits", "UX improvements", "Analytics setup"],
     visual: <OptimiseIllustration />,
   },
   {
-    title: "Operate",
-    description: "Keep the product stable and moving forward.",
+    title: "Maintain",
+    description: "Stay on as your technical team for fixes, features, performance, and support.",
     items: ["Bug fixes", "Feature updates", "Ongoing support"],
     visual: <OperateIllustration />,
+  },
+];
+
+const businessModels = [
+  {
+    title: "Fixed launch sprint",
+    description: "A defined build for a new website, app, Shopify store, MVP, or landing page.",
+    detail: "Best when you need to get from idea to a live product quickly.",
+  },
+  {
+    title: "Growth sprint",
+    description: "A focused optimisation block for conversion, UX, speed, analytics, or funnel fixes.",
+    detail: "Best when you already have traffic but the product is not converting well enough.",
+  },
+  {
+    title: "Monthly technical partner",
+    description: "Ongoing development, maintenance, bug fixes, features, and product improvements.",
+    detail: "Best when you want a reliable tech team without hiring in-house.",
   },
 ];
 
@@ -68,14 +86,18 @@ function OperatingModel() {
     <section className="bg-cream py-16 sm:py-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-[0.88fr_1.12fr] lg:px-8">
         <ScrollReveal>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.15em] text-bark">What changes</p>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.15em] text-bark">What Ascends does</p>
           <h2 className="text-3xl font-semibold leading-tight text-charcoal sm:text-4xl">
-            One team for the parts founders normally have to stitch together.
+            We are the technical team behind your launch, store, app, or growth plan.
           </h2>
           <p className="mt-5 max-w-xl text-base leading-8 text-stone">
-            The redesign is built around a more direct promise: Ascends is not a
-            loose collection of services. It is an operating partner for getting
-            from idea, to launch, to measurable growth.
+            Ascends helps non-technical founders, Shopify brands, and growing
+            businesses build the digital product they need, improve the parts
+            that affect revenue, and keep the technical side moving after launch.
+          </p>
+          <p className="mt-4 max-w-xl text-base leading-8 text-stone">
+            You can hire us for a fixed project, a focused growth sprint, or an
+            ongoing monthly partnership.
           </p>
         </ScrollReveal>
 
@@ -101,6 +123,42 @@ function OperatingModel() {
               </article>
             </ScrollReveal>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function BusinessModel() {
+  return (
+    <section className="border-y border-charcoal/10 bg-white py-16 sm:py-20">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          <ScrollReveal>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.15em] text-bark">How we work</p>
+            <h2 className="text-3xl font-semibold leading-tight text-charcoal sm:text-4xl">
+              Clear ways to work with us, without hiring a full internal team.
+            </h2>
+            <p className="mt-5 text-base leading-8 text-stone">
+              We combine product strategy, design, development, analytics, and
+              optimisation into one partner model. You choose the level of
+              support based on where the business is right now.
+            </p>
+          </ScrollReveal>
+
+          <div className="grid gap-4">
+            {businessModels.map((model, index) => (
+              <ScrollReveal key={model.title} delay={index * 0.06}>
+                <article className="grid gap-4 rounded-lg border border-charcoal/10 bg-cream p-5 sm:grid-cols-[11rem_1fr] sm:p-6">
+                  <h3 className="text-lg font-semibold text-charcoal">{model.title}</h3>
+                  <div>
+                    <p className="text-sm leading-7 text-stone">{model.description}</p>
+                    <p className="mt-2 text-sm font-medium leading-6 text-bark">{model.detail}</p>
+                  </div>
+                </article>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -157,11 +215,12 @@ function Outcomes() {
             <div className="p-8 sm:p-10">
               <p className="mb-4 text-sm font-semibold uppercase tracking-[0.15em] text-emerald-200">Why Ascends</p>
               <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
-                Built for founders who need traction, not theatre.
+                Built for people who need technical execution, not another vague agency.
               </h2>
               <p className="mt-5 text-base leading-8 text-cream/68">
-                You get senior execution, short feedback loops, and a team that
-                stays close to business outcomes after the first release.
+                You get practical product thinking, fast implementation, clear
+                communication, and a team that stays close to revenue, stability,
+                and user experience after the first release.
               </p>
             </div>
             <div className="grid border-t border-white/10 lg:grid-cols-3 lg:border-l lg:border-t-0">
@@ -185,18 +244,18 @@ function FinalCTA() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="rounded-lg border border-charcoal/10 bg-white p-8 text-center shadow-sm sm:p-12">
           <h2 className="text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">
-            Ready to turn the idea into something users can touch?
+            Need a website, app, store, or technical team?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-stone">
-            Bring the messy context. We will help shape it into a clear first
-            sprint, a realistic launch plan, and the systems to keep improving.
+            Bring the messy context. We will help you choose the right path:
+            fixed build, growth sprint, or ongoing technical partnership.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
               href="/contact"
               className="inline-flex min-h-11 items-center justify-center rounded-full bg-warm px-7 py-3 text-sm font-semibold text-white shadow-sm shadow-warm/25 transition-colors hover:bg-bark"
             >
-              Start the conversation
+              Inquire now
             </Link>
             <Link
               href="/services"
@@ -217,6 +276,7 @@ export default function Home() {
       <CinematicHero />
       <ProofStrip />
       <OperatingModel />
+      <BusinessModel />
       <ProcessPanel />
       <Outcomes />
       <FinalCTA />

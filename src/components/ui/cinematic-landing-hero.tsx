@@ -222,14 +222,14 @@ export interface CinematicHeroProps extends React.HTMLAttributes<HTMLDivElement>
 }
 
 export function CinematicHero({
-  tagline1 = "Build the product,",
-  tagline2 = "then make it grow.",
-  cardHeading = "Technical partnership, sharpened.",
+  tagline1 = "We build websites & apps.",
+  tagline2 = "Then help them grow.",
+  cardHeading = "Web apps, Shopify stores, CRO, and ongoing tech support.",
   cardDescription = (
     <>
-      <span className="font-semibold text-white">Ascends</span> helps founders
-      launch polished products, improve conversion, and keep the technical side
-      moving after release.
+      <span className="font-semibold text-white">Ascends</span> is your
+      technical partner: we scope, design, build, launch, optimise, and maintain
+      the digital product behind your business.
     </>
   ),
   metricValue = 42,
@@ -250,26 +250,39 @@ export function CinematicHero({
       gsap.set(".main-card", { y: window.innerHeight + 200, autoAlpha: 1 });
       gsap.set([".card-left-text", ".card-right-text", ".mockup-scroll-wrapper", ".floating-badge", ".phone-widget", ".card-contact-cta"], { autoAlpha: 0 });
 
-      const timedTl = gsap.timeline({ delay: 0.15 });
+      const timedTl = gsap.timeline({ delay: 0.1 });
       timedTl
-        .to(".text-track", { duration: 1.42, autoAlpha: 1, y: 0, scale: 1, filter: "blur(0px)", rotationX: 0, ease: "expo.out" })
-        .to(".text-days", { duration: 1.18, autoAlpha: 1, y: 0, filter: "blur(0px)", ease: "power4.out" }, "-=0.62")
-        .to([".hero-text-wrapper", ".bg-grid-theme"], { scale: 1.04, filter: "blur(8px)", opacity: 0.08, ease: "power2.inOut", duration: 1.05 }, "+=0.72")
-        .to(".main-card", { y: 0, ease: "power3.inOut", duration: 0.95 }, "<")
-        .to(".main-card", { width: "100%", height: "100%", borderRadius: "0px", ease: "power3.inOut", duration: 0.7 })
+        .to(".text-track", { duration: 0.9, autoAlpha: 1, y: 0, scale: 1, filter: "blur(0px)", rotationX: 0, ease: "expo.out" })
+        .to(".text-days", { duration: 0.78, autoAlpha: 1, y: 0, filter: "blur(0px)", ease: "power4.out" }, "-=0.42")
+        .to([".hero-text-wrapper", ".bg-grid-theme"], { scale: 1.04, filter: "blur(8px)", opacity: 0.08, ease: "power2.inOut", duration: 0.54 }, "+=0.3")
+        .to(".main-card", { y: 0, ease: "power3.inOut", duration: 0.54 }, "<")
+        .to(".main-card", { width: "100%", height: "100%", borderRadius: "0px", ease: "power3.inOut", duration: 0.4 });
+
+      if (isMobile) {
+        timedTl
+          .fromTo(".card-right-text", { y: -14, autoAlpha: 0, scale: 0.96 }, { y: 0, autoAlpha: 1, scale: 1, ease: "power4.out", duration: 0.42 }, "-=0.12")
+          .fromTo(".card-left-text", { y: 18, autoAlpha: 0 }, { y: 0, autoAlpha: 1, ease: "power4.out", duration: 0.42 }, "-=0.28")
+          .fromTo(".card-contact-cta", { y: 12, autoAlpha: 0, scale: 0.96 }, { y: 0, autoAlpha: 1, scale: 1, ease: "power3.out", duration: 0.34 }, "-=0.26");
+      }
+
+      timedTl
         .fromTo(
           ".mockup-scroll-wrapper",
           { y: 300, z: -500, rotationX: 50, rotationY: -30, autoAlpha: 0, scale: 0.6 },
-          { y: 0, z: 0, rotationX: 0, rotationY: 0, autoAlpha: 1, scale: 1, ease: "expo.out", duration: 1.0 },
-          "-=0.35",
+          { y: 0, z: 0, rotationX: 0, rotationY: 0, autoAlpha: 1, scale: 1, ease: "expo.out", duration: 0.82 },
+          "-=0.28",
         )
-        .fromTo(".phone-widget", { y: 40, autoAlpha: 0, scale: 0.95 }, { y: 0, autoAlpha: 1, scale: 1, stagger: 0.1, ease: "back.out(1.2)", duration: 0.75 }, "-=0.65")
-        .to(".progress-ring", { strokeDashoffset: 60, duration: 0.95, ease: "power3.inOut" }, "-=0.65")
-        .to(".counter-val", { innerHTML: metricValue, snap: { innerHTML: 1 }, duration: 0.95, ease: "expo.out" }, "-=0.95")
-        .fromTo(".floating-badge", { y: 70, autoAlpha: 0, scale: 0.7, rotationZ: -8 }, { y: 0, autoAlpha: 1, scale: 1, rotationZ: 0, ease: "back.out(1.5)", duration: 0.7, stagger: 0.12 }, "-=0.8")
-        .fromTo(".card-left-text", { x: isMobile ? 0 : -50, y: isMobile ? 24 : 0, autoAlpha: 0 }, { x: 0, y: 0, autoAlpha: 1, ease: "power4.out", duration: 0.75 }, "-=0.45")
-        .fromTo(".card-right-text", { x: isMobile ? 0 : 50, y: isMobile ? -20 : 0, autoAlpha: 0, scale: 0.9 }, { x: 0, y: 0, autoAlpha: 1, scale: 1, ease: "expo.out", duration: 0.75 }, "<")
-        .fromTo(".card-contact-cta", { y: 18, autoAlpha: 0, scale: 0.96 }, { y: 0, autoAlpha: 1, scale: 1, ease: "power3.out", duration: 0.55 }, "-=0.2");
+        .fromTo(".phone-widget", { y: 40, autoAlpha: 0, scale: 0.95 }, { y: 0, autoAlpha: 1, scale: 1, stagger: 0.08, ease: "back.out(1.2)", duration: 0.6 }, "-=0.52")
+        .to(".progress-ring", { strokeDashoffset: 60, duration: 0.68, ease: "power3.inOut" }, "-=0.58")
+        .to(".counter-val", { innerHTML: metricValue, snap: { innerHTML: 1 }, duration: 0.68, ease: "expo.out" }, "-=0.68")
+        .fromTo(".floating-badge", { y: 70, autoAlpha: 0, scale: 0.7, rotationZ: -8 }, { y: 0, autoAlpha: 1, scale: 1, rotationZ: 0, ease: "back.out(1.5)", duration: 0.54, stagger: 0.1 }, "-=0.56");
+
+      if (!isMobile) {
+        timedTl
+          .fromTo(".card-left-text", { x: -50, autoAlpha: 0 }, { x: 0, autoAlpha: 1, ease: "power4.out", duration: 0.58 }, "-=0.34")
+          .fromTo(".card-right-text", { x: 50, autoAlpha: 0, scale: 0.9 }, { x: 0, autoAlpha: 1, scale: 1, ease: "expo.out", duration: 0.58 }, "<")
+          .fromTo(".card-contact-cta", { y: 18, autoAlpha: 0, scale: 0.96 }, { y: 0, autoAlpha: 1, scale: 1, ease: "power3.out", duration: 0.44 }, "-=0.14");
+      }
     }, containerRef);
 
     return () => ctx.revert();
@@ -302,17 +315,21 @@ export function CinematicHero({
         >
           <div className="card-sheen" aria-hidden="true" />
 
-          <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col items-center justify-between px-4 pb-5 pt-2 md:pb-7 md:pt-4 lg:grid lg:grid-cols-[1.2fr_1fr_1.2fr] lg:gap-12 lg:px-8 lg:py-0 xl:gap-16 xl:px-4">
-            <div className="card-right-text gsap-reveal order-1 z-20 flex w-full flex-col items-center justify-center lg:order-1 lg:items-start">
+          <div className="relative z-10 mx-auto flex h-full w-full max-w-7xl flex-col items-center justify-center gap-2 px-4 py-4 sm:gap-3 md:justify-between md:pb-7 md:pt-4 lg:grid lg:grid-cols-[1.2fr_1fr_1.2fr] lg:gap-12 lg:px-8 lg:py-0 xl:gap-16 xl:px-4">
+            <div className="card-right-text gsap-reveal order-1 z-20 flex w-full shrink-0 flex-col items-center justify-center lg:order-1 lg:items-start">
               <AscentInline className="hero-ascent-logo" />
+              <p className="mt-2 hidden max-w-xs text-center text-sm font-medium leading-6 text-blue-100/75 sm:block lg:text-left">
+                We build and improve the websites, apps, stores, and systems
+                your business runs on.
+              </p>
               <a href="/contact" aria-label="Get in touch with Ascends" className="card-contact-cta btn-contact-clean group mt-5 hidden min-h-14 items-center justify-center gap-2 rounded-2xl px-8 text-base font-bold tracking-normal focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-blue-700 lg:inline-flex">
-                Get in touch
+                Inquire now
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </a>
             </div>
 
-            <div className="mockup-scroll-wrapper order-2 relative z-10 flex h-[380px] w-full items-center justify-center lg:order-2 lg:h-[600px]" style={{ perspective: "1000px" }}>
-              <div className="relative flex h-full w-full scale-[0.65] items-center justify-center md:scale-[0.85] lg:scale-100">
+            <div className="mockup-scroll-wrapper order-2 relative z-10 flex h-[255px] w-full shrink-0 items-center justify-center sm:h-[320px] md:h-[430px] lg:order-2 lg:h-[600px]" style={{ perspective: "1000px" }}>
+              <div className="relative flex h-full w-full scale-[0.44] items-center justify-center sm:scale-[0.55] md:scale-[0.74] lg:scale-100">
                 <div
                   ref={mockupRef}
                   className="iphone-bezel transform-style-3d relative flex h-[580px] w-[280px] flex-col rounded-[3rem] will-change-transform"
@@ -397,15 +414,22 @@ export function CinematicHero({
               </div>
             </div>
 
-            <div className="card-left-text gsap-reveal order-3 z-20 flex w-full flex-col justify-center px-4 text-center lg:order-3 lg:max-w-none lg:px-0 lg:text-right">
-              <h3 className="mb-0 text-2xl font-bold tracking-tight text-white md:text-3xl lg:mb-5 lg:text-4xl">
+            <div className="card-left-text gsap-reveal order-3 z-20 flex w-full shrink-0 flex-col justify-center px-2 text-center sm:px-4 lg:order-3 lg:max-w-none lg:px-0 lg:text-right">
+              <h3 className="mb-0 text-[1.35rem] font-bold leading-tight tracking-tight text-white sm:text-2xl md:text-3xl lg:mb-5 lg:text-4xl">
                 {cardHeading}
               </h3>
-              <p className="mx-auto hidden max-w-sm text-sm font-normal leading-relaxed text-blue-100/70 lg:ml-auto lg:mr-0 lg:block lg:max-w-md lg:text-lg">
+              <p className="mx-auto mt-2 hidden max-w-sm text-sm font-normal leading-relaxed text-blue-100/70 sm:block lg:ml-auto lg:mr-0 lg:mt-0 lg:max-w-md lg:text-lg">
                 {cardDescription}
               </p>
-              <a href="/contact" aria-label="Get in touch with Ascends" className="card-contact-cta btn-contact-clean group mt-4 inline-flex min-h-14 items-center justify-center gap-2 self-center rounded-2xl px-8 text-base font-bold tracking-normal focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-blue-700 lg:hidden">
-                Get in touch
+              <div className="mx-auto mt-3 hidden max-w-sm grid-cols-3 gap-2 sm:grid lg:ml-auto lg:mr-0 lg:mt-4">
+                {["Build", "Optimise", "Maintain"].map((item) => (
+                  <span key={item} className="rounded-full border border-white/15 bg-white/8 px-3 py-2 text-center text-[11px] font-semibold uppercase tracking-[0.12em] text-blue-50/85">
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <a href="/contact" aria-label="Inquire with Ascends" className="card-contact-cta btn-contact-clean group mt-3 inline-flex min-h-12 items-center justify-center gap-2 self-center rounded-2xl px-7 text-sm font-bold tracking-normal focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-blue-700 sm:mt-4 sm:min-h-14 sm:px-8 sm:text-base lg:hidden">
+                Inquire now
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </a>
             </div>

@@ -36,7 +36,7 @@ export default function Navbar() {
               href="/contact"
               className="ml-3 rounded-full bg-warm px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-warm/25 transition-all hover:bg-bark"
             >
-              Get in touch
+              Inquire now
             </Link>
           </div>
 
@@ -86,7 +86,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
               className="mt-3 block rounded-full bg-warm px-5 py-3 text-center text-sm font-semibold text-white"
             >
-              Get in touch
+              Inquire now
             </Link>
           </div>
         </div>
