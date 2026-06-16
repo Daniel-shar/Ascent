@@ -6,7 +6,7 @@ import CaseStudyMetric from "@/components/CaseStudyMetric";
 import { AbstractBlobs } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Ascends",
+  title: "Case Studies — Ascent",
   description: "See how we've helped founders and brands build, optimise, and scale.",
 };
 

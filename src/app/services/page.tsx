@@ -11,7 +11,7 @@ import {
 } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
-  title: "Services — Ascends",
+  title: "Services — Ascent",
   description: "From MVP development to CRO and ongoing maintenance. Ascends handles the entire journey.",
 };
 

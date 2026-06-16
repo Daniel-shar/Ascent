@@ -7,7 +7,7 @@ import StarRating from "@/components/StarRating";
 import { AbstractBlobs, LaunchIllustration } from "@/components/Illustrations";
 
 export const metadata: Metadata = {
-  title: "About — Ascends",
+  title: "About — Ascent",
   description: "Ascends was built to help founders and businesses move faster with end-to-end technical execution.",
 };
 
